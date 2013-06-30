@@ -9,5 +9,6 @@
     <modules>
         <module>securitymanager</module>
         <module>SSL</module>
+        <module>ClassPathViewer</module>
     </modules>
 </project>
