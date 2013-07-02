@@ -1,2 +1,10 @@
 /SSL/target/
 /ClassPathViewer/target/
+/jacoco-poc/api/target/
+/jacoco-poc/impl/target/
+/jacoco-poc/coverage/target/
+/jacoco-poc/web/target/
+/jacoco-poc-IT/api/target/
+/jacoco-poc-IT/coverage/target/
+/jacoco-poc-IT/impl/target/
+/jacoco-poc-IT/web/target/

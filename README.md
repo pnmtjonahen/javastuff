@@ -9,3 +9,5 @@ All kind of java stuff
 * SSL Client and Server application, does not work as it is missing certificates and so.
 
 * securitymanager shows how to use an SecuriyManager
+
+* coverage Shows how we can use JaCoCo test coverage to calculate coverage in a multi-module setup. The api contains no jUnit test. All tests are done by the impl artifact.

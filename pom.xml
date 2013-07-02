@@ -10,5 +10,6 @@
         <module>securitymanager</module>
         <module>SSL</module>
         <module>ClassPathViewer</module>
+        <module>jacoco-poc</module>
     </modules>
 </project>
