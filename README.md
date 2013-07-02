@@ -10,4 +10,8 @@ All kind of java stuff
 
 * securitymanager shows how to use an SecuriyManager
 
-* coverage Shows how we can use JaCoCo test coverage to calculate coverage in a multi-module setup. The api contains no jUnit test. All tests are done by the impl artifact.
+* coverage Shows how we can use JaCoCo test coverage to calculate coverage in a multi-module setup. 
+The api contains no jUnit test. All tests are done by the impl artifact.
+* Resources:
+
+ * http://www.lordofthejars.com/2012/07/jacoco-in-maven-multi-module-projects.html
