@@ -11,5 +11,6 @@
         <module>SSL</module>
         <module>ClassPathViewer</module>
         <module>jacoco-poc</module>
+        <module>jacoco-poc-IT</module>
     </modules>
 </project>
