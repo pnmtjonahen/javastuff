@@ -10,7 +10,7 @@
     </parent>
     <groupId>nl.tjonahen.jacoco-poc</groupId>
     <artifactId>coverage</artifactId>
-    <name>Java Stuff - jacoco-poc UT and IT coverage - Report</name>
+    <name>Java Stuff - jacoco-poc UT coverage - Report</name>
 
     <properties>
 

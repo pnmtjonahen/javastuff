@@ -6,7 +6,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Java Stuff - jacoco-poc UT and IT coverage</name>
+    <name>Java Stuff - jacoco-poc UT coverage</name>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
