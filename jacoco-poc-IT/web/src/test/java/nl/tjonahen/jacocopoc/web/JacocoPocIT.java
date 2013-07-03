@@ -30,6 +30,11 @@ import org.junit.Test;
  */
 public class JacocoPocIT {
 
+    /**
+     * Integration test. The war file is deployed on an embedded glassfish instance during pre-integration-test phase.
+     * As the jacoco agent is not running / used starting glassfish we do not have coverage information.
+     * 
+     */
     @Test
     public void callRestFullService() {
         try {
@@ -49,5 +54,17 @@ public class JacocoPocIT {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+    
+    
+    /**
+     * Perform the integration test using direct instantiation of the restfull service class and calling it.
+     */
+    @Test
+    public void callDirect() {
+        final GenericResource genericResource = new GenericResource();
+        Assert.assertEquals("aap:aap+noot:noot",genericResource.getXml());
+        
+        genericResource.putXml("aap", "noot");
     }
 }

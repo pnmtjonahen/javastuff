@@ -48,10 +48,10 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco.version}</version>
-                <!--                <configuration>
+                <configuration>
                     <propertyName>jacoco.agent.argLine</propertyName>
                     <append>true</append>
-                </configuration>-->
+                </configuration>
                 <executions>
                     <execution>
                         <id>agent</id>
@@ -59,21 +59,6 @@
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
-<!--                    <execution>
-                        <id>prep</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>instrument</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>restore</id>
-                        <phase>post-integration-test</phase>
-                        <goals>
-                            <goal>restore-instrumented-classes</goal>
-                        </goals>
-                    </execution>-->
-                    
                 </executions>
             </plugin>
             <plugin>
