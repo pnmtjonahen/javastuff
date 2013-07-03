@@ -17,3 +17,4 @@ lassfish cannot be started using the jacoco agent by maven. As long this is the 
 * Resources:
 
  * http://www.lordofthejars.com/2012/07/jacoco-in-maven-multi-module-projects.html
+ * http://blog.javabien.net/2012/11/23/combine-surefire-tests-and-failsafe-tests-coverage/
