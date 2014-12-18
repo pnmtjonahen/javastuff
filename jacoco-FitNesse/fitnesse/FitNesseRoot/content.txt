@@ -1,0 +1,17 @@
+# File created by Mafia plugin on Fri Jul 05 17:38:57 CEST 2013
+# More info: https://github.com/sijpesteijn/mafia-maven-plugin
+
+!note Project Dependencies:
+
+!path /home/ordina/.m2/repository/nl/tjonahen/jacoco-fitnesse/api/1.0-SNAPSHOT/api-1.0-SNAPSHOT.jar
+!path /home/ordina/.m2/repository/nl/tjonahen/jacoco-fitnesse/impl/1.0-SNAPSHOT/impl-1.0-SNAPSHOT.jar
+!path /home/ordina/.m2/repository/nl/tjonahen/jacoco-fitnesse/web/1.0-SNAPSHOT/web-1.0-SNAPSHOT.jar
+!path /home/ordina/.m2/repository/org/fitnesse/fitnesse/20130530/fitnesse-20130530.jar
+!path /home/ordina/.m2/repository/org/htmlparser/htmlparser/2.1/htmlparser-2.1.jar
+!path /home/ordina/.m2/repository/org/htmlparser/htmllexer/2.1/htmllexer-2.1.jar
+!path /home/ordina/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar
+!path /home/ordina/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar
+!path /home/ordina/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar
+!path /home/ordina/.m2/repository/org/json/json/20090211/json-20090211.jar
+!path /home/ordina/.m2/repository/com/googlecode/java-diff-utils/diffutils/1.2.1/diffutils-1.2.1.jar
+
