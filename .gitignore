@@ -8,3 +8,10 @@
 /jacoco-poc-IT/coverage/target/
 /jacoco-poc-IT/impl/target/
 /jacoco-poc-IT/web/target/
+/jacoco-FitNesse/api/target/
+/jacoco-FitNesse/coverage/target/
+/jacoco-FitNesse/impl/target/
+/jacoco-FitNesse/web/target/
+/jacoco-FitNesse/fitnesse/target/
+/java8stuff/target/
+/multicast/target/
