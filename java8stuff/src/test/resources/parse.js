@@ -44,3 +44,15 @@ function parseToJson(line) {
 }
 ;
 
+
+function parseToJavaClass(line) {
+    var splitted = split(line);
+
+    var WordBean = Java.type('nl.tjonahen.jaavastuff.java8stuff.WordBean');
+
+    var wordBean = new WordBean();
+    wordBean.index = 1;
+    wordBean.value = splitted[1];
+    return wordBean;
+}
+;

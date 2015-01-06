@@ -66,4 +66,20 @@ public class JavaScriptTest {
         System.out.println("first:" + obj.getMember("first"));
         
     }
+    @Test
+    public void testParseToJavaClass() throws ScriptException, NoSuchMethodException {
+        ScriptEngineManager engineManager
+                = new ScriptEngineManager();
+        
+        ScriptEngine engine
+                = engineManager.getEngineByName("nashorn");
+        engine.eval(new InputStreamReader(this.getClass().getResourceAsStream("/parse.js")));
+        Invocable invocable = (Invocable) engine;
+                                                      
+        Object obj = invocable.invokeFunction("parseToJavaClass","\"Aap\",\"Noot\",\"Mies\",\"Wim\",\"Zus\",\"Jet\",\"Vuur\",\"Gijs\",\"Tom\"");
+        
+       
+        System.out.println("" + obj.getClass().getName());
+        
+    }
 }
