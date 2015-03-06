@@ -44,11 +44,11 @@ public class Kenny {
 
     private String kennyWords(String w) {
         return Arrays.asList(
-                 Arrays.asList(w.split("")).stream().map(this::kennyChars).reduce("", this::sum).split("(?<=\\G...)"))
+            Arrays.asList(w.split("")).stream().map(this::mapToTriplets).reduce("", this::sum).split("(?<=\\G...)"))
                .stream().map(this::fromKenny).map(this::mapToString).reduce("", this::sum);
     }
 
-    private String kennyChars(String k) {
+    private String mapToTriplets(String k) {
         if ("FMP".contains(k.toUpperCase())) {
             return k;
         }
