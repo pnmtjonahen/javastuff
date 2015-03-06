@@ -45,7 +45,7 @@ public class Kenny {
     private String kennyWords(String w) {
         return Arrays.asList(
                  Arrays.asList(w.split("")).stream().map(this::kennyChars).reduce("", this::sum).split("(?<=\\G...)"))
-               .stream().map(this::fromKenny).map(c -> "" + c).reduce("", this::sum);
+               .stream().map(this::fromKenny).map(this::mapToString).reduce("", this::sum);
     }
 
     private String kennyChars(String k) {
@@ -80,5 +80,9 @@ public class Kenny {
 
     private String sumWords(final String t, String u) {
         return t.equals("") ? u : t + " " + u;
+    }
+    
+    private String mapToString(char k) {
+        return "" + k;
     }
 }
