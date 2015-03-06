@@ -33,11 +33,15 @@ public class KennyTest {
      */
     @Test
     public void testEncode() {
-        String input = "Wie is kenny p@y me $300";
-        Kenny instance = new Kenny();
-        String expResult = "Fppmffmpp mfffmm pmpmppppppppffm pfm@ffm ppmmpp $300";
-        String result = instance.encode(input);
-        assertEquals(expResult, result);
+        assertEquals("Fppmffmpp mfffmm pmpmppppppppffm pfm@ffm ppmmpp $300", 
+                        new Kenny().encode("Wie is kenny p@y me $300"));
+    }
+    @Test
+    public void testEncodeABC() {
+        assertEquals("MmmMmpMmfMpmMppMpfMfmMfpMffPmmPmpPmfPpmPppPpfPfmPfpPffFmmFmpFmfFpmFppFpfFfmFfp", 
+                new Kenny().encode("ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+        assertEquals("mmmmmpmmfmpmmppmpfmfmmfpmffpmmpmppmfppmpppppfpfmpfppfffmmfmpfmffpmfppfpfffmffp", 
+                new Kenny().encode("abcdefghijklmnopqrstuvwxyz"));
     }
 
     /**
@@ -45,11 +49,16 @@ public class KennyTest {
      */
     @Test
     public void testDecode() {
-        String input = "Fppmffmpp mfffmm pmpmppppppppffm pfm@ffm ppmmpp $300";
-        Kenny instance = new Kenny();
-        String expResult = "Wie is kenny p@y me $300";
-        String result = instance.decode(input);
-        assertEquals(expResult, result);
+        assertEquals("Wie is kenny p@y me $300", 
+                new Kenny().decode("Fppmffmpp mfffmm pmpmppppppppffm pfm@ffm ppmmpp $300"));
+    }
+
+    @Test
+    public void testDecodeABC() {
+        assertEquals("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 
+                new Kenny().decode("MmmMmpMmfMpmMppMpfMfmMfpMffPmmPmpPmfPpmPppPpfPfmPfpPffFmmFmpFmfFpmFppFpfFfmFfp"));
+        assertEquals("abcdefghijklmnopqrstuvwxyz", 
+                new Kenny().decode("mmmmmpmmfmpmmppmpfmfmmfpmffpmmpmppmfppmpppppfpfmpfppfffmmfmpfmffpmfppfpfffmffp"));
     }
     
 }

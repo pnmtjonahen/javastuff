@@ -49,10 +49,7 @@ public class Kenny {
     }
 
     private String mapToTriplets(String k) {
-        if ("FMP".contains(k.toUpperCase())) {
-            return k;
-        }
-        return k + k + k;
+        return "FMP".contains(k.toUpperCase()) ? k : k + k + k;
     }
 
     private char fromKenny(final String k) {
