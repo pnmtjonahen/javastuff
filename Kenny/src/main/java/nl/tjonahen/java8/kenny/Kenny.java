@@ -35,51 +35,27 @@ public class Kenny {
         "fpp", "fpf", "ffm", "ffp"};
 
     public String encode(final String input) {
-        return Arrays.asList(input.split("")).stream().map(this::toKenny).reduce("", this::sum);
+        return Arrays.asList(input.split("")).stream().map(s -> s.matches("[a-z]")
+                ? KENNYLETTERS[s.charAt(0) - 'a']
+                : (s.matches("[A-Z]")
+                        ? KENNYLETTERS[s.charAt(0) - 'A'].substring(0, 1).toUpperCase() 
+                                + KENNYLETTERS[s.charAt(0) - 'A'].substring(1)
+                        : s))
+                .reduce("", (t, u) -> t + u);
     }
 
     public String decode(final String input) {
-        return Arrays.asList(input.split(" ")).stream().map(this::kennyWords).reduce("", this::sumWords);
-    }
-
-    private String kennyWords(String w) {
-        return Arrays.asList(
-            Arrays.asList(w.split("")).stream().map(this::mapToTriplets).reduce("", this::sum).split("(?<=\\G...)"))
-               .stream().map(this::fromKenny).map(this::mapToString).reduce("", this::sum);
-    }
-
-    private String mapToTriplets(String k) {
-        return "FMP".contains(k.toUpperCase()) ? k : k + k + k;
-    }
-
-    private char fromKenny(final String k) {
-        return (char) IntStream.range(0, KENNYLETTERS.length)
-                .filter(i -> KENNYLETTERS[i].equals(k.toLowerCase()))
-                .map(i -> Character.isUpperCase(k.charAt(0)) ? (char) ('A' + i) : (char) ('a' + i))
-                .findFirst()
-                .orElse(k.charAt(0));
-    }
-
-    private String toKenny(final String s) {
-        if (s.matches("[a-z]")) {
-            return KENNYLETTERS[s.charAt(0) - 'a'];
-        }
-        if (s.matches("[A-Z]")) {
-            char c = s.charAt(0);
-            return KENNYLETTERS[c - 'A'].substring(0, 1).toUpperCase() + KENNYLETTERS[c - 'A'].substring(1);
-        }
-        return s;
-    }
-
-    private String sum(final String t, String u) {
-        return t + u;
-    }
-
-    private String sumWords(final String t, String u) {
-        return t.equals("") ? u : t + " " + u;
-    }
-    
-    private String mapToString(char k) {
-        return "" + k;
+        return Arrays.asList(input.split(" ")).stream().map(w -> Arrays.asList(
+                Arrays.asList(w.split(""))
+                .stream()
+                .map(k -> "FMP".contains(k.toUpperCase()) ? k : k + k + k)
+                .reduce("", (t, u) -> t + u).split("(?<=\\G...)"))
+                .stream().map(k -> (char) IntStream.range(0, KENNYLETTERS.length)
+                        .filter(i -> KENNYLETTERS[i].equals(k.toLowerCase()))
+                        .map(i -> Character.isUpperCase(k.charAt(0)) ? (char) ('A' + i) : (char) ('a' + i))
+                        .findFirst()
+                        .orElse(k.charAt(0)))
+                .map(k -> "" + k).reduce("", (t, u) -> t + u))
+                .reduce("", (t, u) -> t.equals("") ? u : t + " " + u);
     }
 }
