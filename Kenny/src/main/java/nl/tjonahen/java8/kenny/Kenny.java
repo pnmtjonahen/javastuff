@@ -35,7 +35,7 @@ public class Kenny {
         "fpp", "fpf", "ffm", "ffp"};
 
     public String encode(final String input) {
-        return Arrays.asList(input.split("")).stream().map(s -> s.matches("[a-z]")
+        return Arrays.stream(input.split("")).map(s -> s.matches("[a-z]")
                 ? KENNYLETTERS[s.charAt(0) - 'a']
                 : (s.matches("[A-Z]")
                         ? KENNYLETTERS[s.charAt(0) - 'A'].substring(0, 1).toUpperCase() 
@@ -45,9 +45,8 @@ public class Kenny {
     }
 
     public String decode(final String input) {
-        return Arrays.asList(input.split(" ")).stream().map(w -> Arrays.asList(
-                Arrays.asList(w.split(""))
-                .stream()
+        return Arrays.stream(input.split(" ")).map(w -> Arrays.asList(
+                Arrays.stream(w.split(""))
                 .map(k -> "FMP".contains(k.toUpperCase()) ? k : k + k + k)
                 .reduce("", (t, u) -> t + u).split("(?<=\\G...)"))
                 .stream().map(k -> (char) IntStream.range(0, KENNYLETTERS.length)

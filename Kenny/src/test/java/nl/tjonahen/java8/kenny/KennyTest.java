@@ -24,23 +24,17 @@ import org.junit.Test;
  * @author Philippe Tjon - A - Hen, philippe@tjonahen.nl
  */
 public class KennyTest {
-    
-    public KennyTest() {
-    }
 
     /**
      * Test of encode method, of class Kenny.
      */
     @Test
     public void testEncode() {
-        assertEquals("Fppmffmpp mfffmm pmpmppppppppffm pfm@ffm ppmmpp $300", 
-                        new Kenny().encode("Wie is kenny p@y me $300"));
-    }
-    @Test
-    public void testEncodeABC() {
-        assertEquals("MmmMmpMmfMpmMppMpfMfmMfpMffPmmPmpPmfPpmPppPpfPfmPfpPffFmmFmpFmfFpmFppFpfFfmFfp", 
+        assertEquals("Fppmffmpp mfffmm pmpmppppppppffm pfm@ffm ppmmpp $300",
+                new Kenny().encode("Wie is kenny p@y me $300"));
+        assertEquals("MmmMmpMmfMpmMppMpfMfmMfpMffPmmPmpPmfPpmPppPpfPfmPfpPffFmmFmpFmfFpmFppFpfFfmFfp",
                 new Kenny().encode("ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
-        assertEquals("mmmmmpmmfmpmmppmpfmfmmfpmffpmmpmppmfppmpppppfpfmpfppfffmmfmpfmffpmfppfpfffmffp", 
+        assertEquals("mmmmmpmmfmpmmppmpfmfmmfpmffpmmpmppmfppmpppppfpfmpfppfffmmfmpfmffpmfppfpfffmffp",
                 new Kenny().encode("abcdefghijklmnopqrstuvwxyz"));
     }
 
@@ -49,16 +43,12 @@ public class KennyTest {
      */
     @Test
     public void testDecode() {
-        assertEquals("Wie is kenny p@y me $300", 
+        assertEquals("Wie is kenny p@y me $300",
                 new Kenny().decode("Fppmffmpp mfffmm pmpmppppppppffm pfm@ffm ppmmpp $300"));
-    }
-
-    @Test
-    public void testDecodeABC() {
-        assertEquals("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 
+        assertEquals("ABCDEFGHIJKLMNOPQRSTUVWXYZ",
                 new Kenny().decode("MmmMmpMmfMpmMppMpfMfmMfpMffPmmPmpPmfPpmPppPpfPfmPfpPffFmmFmpFmfFpmFppFpfFfmFfp"));
-        assertEquals("abcdefghijklmnopqrstuvwxyz", 
+        assertEquals("abcdefghijklmnopqrstuvwxyz",
                 new Kenny().decode("mmmmmpmmfmpmmppmpfmfmmfpmffpmmpmppmfppmpppppfpfmpfppfffmmfmpfmffpmfppfpfffmffp"));
     }
-    
+
 }
