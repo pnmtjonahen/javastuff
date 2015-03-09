@@ -16,7 +16,6 @@
  */
 package nl.tjonahen.java8.kenny;
 
-import java.util.stream.IntStream;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
