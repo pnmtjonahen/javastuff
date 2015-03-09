@@ -51,11 +51,5 @@ public class KennyTest {
         assertEquals("abcdefghijklmnopqrstuvwxyz",
                 new Kenny().decode("mmmmmpmmfmpmmppmpfmfmmfpmffpmmpmppmfppmpppppfpfmpfppfffmmfmpfmffpmfppfpfffmffp"));
     }
-
-    
-    @Test
-    public void test() {
-        String k = "k";
-        assertEquals("kkk", IntStream.range(0, 3).mapToObj(i -> k).reduce("", (t, u) -> t + u));
-    }
+   
 }
