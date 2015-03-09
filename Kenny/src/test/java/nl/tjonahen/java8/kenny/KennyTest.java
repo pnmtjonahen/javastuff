@@ -16,6 +16,7 @@
  */
 package nl.tjonahen.java8.kenny;
 
+import java.util.stream.IntStream;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
@@ -51,4 +52,10 @@ public class KennyTest {
                 new Kenny().decode("mmmmmpmmfmpmmppmpfmfmmfpmffpmmpmppmfppmpppppfpfmpfppfffmmfmpfmffpmfppfpfffmffp"));
     }
 
+    
+    @Test
+    public void test() {
+        String k = "k";
+        assertEquals("kkk", IntStream.range(0, 3).mapToObj(i -> k).reduce("", (t, u) -> t + u));
+    }
 }
