@@ -16,5 +16,6 @@
         <module>jacoco-FitNesse</module>
     <module>java8stuff</module>
     <module>multicast</module>
-  </modules>
+        <module>newio</module>
+    </modules>
 </project>
