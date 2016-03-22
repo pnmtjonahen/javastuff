@@ -7,15 +7,15 @@
     <packaging>pom</packaging>
 
     <name>Java Stuff - jacoco-poc UT and IT coverage</name>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <netbeans.hint.license>gpl30</netbeans.hint.license>
 
-        <jacoco.version>0.6.3.201306030806</jacoco.version>
+        <jacoco.version>0.7.6.201602180812</jacoco.version>
     </properties>
-    
+
     <dependencyManagement>
         <dependencies>
             <dependency>

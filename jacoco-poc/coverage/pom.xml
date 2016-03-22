@@ -19,7 +19,7 @@
         <sonar.jacoco.reportPath>${project.basedir}/target/jacoco.exec</sonar.jacoco.reportPath>
         <sonar.language>java</sonar.language>
 
-        
+
 
 
         <build.directory.project.api>../api/target</build.directory.project.api>
@@ -30,17 +30,10 @@
 
         <sources.directory.project.api>../api/src/main/java</sources.directory.project.api>
         <sources.directory.project.impl>../impl/src/main/java</sources.directory.project.impl>
-		
+
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>nl.tjonahen.jacoco-poc</groupId>
-            <artifactId>web</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <type>war</type>
-        </dependency>
-    </dependencies>
-	
+
+
     <build>
         <plugins>
             <plugin>
@@ -161,5 +154,5 @@
             </plugins>
         </pluginManagement>
     </build>
-	
+
 </project>
